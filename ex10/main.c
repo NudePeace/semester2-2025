@@ -143,7 +143,7 @@ long long binary_search(const long long arr[], int size, long long key) {
 int main() {
     srand(time(NULL));  
 
-    const char* filename = "C:\\Users\\lastg\\Downloads\\dataset_id_ascending.csv";  // Đường dẫn tới file dữ liệu
+    const char* filename = "C:\\Users\\lastg\\Downloads\\dataset_id_ascending.csv";
     int num_students = 0;
     long long* original_scores = load_product_scores(filename, &num_students);
 
