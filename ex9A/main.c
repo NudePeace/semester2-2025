@@ -957,6 +957,7 @@ void run_and_average_sort(
     printf("\n>>> %s 로 %s 정렬 알고리즘<<<\n", comparison_name, sort_name);
     
     for (int i = 0; i < NUM_REPETITIONS; i++) {
+        current_metrics.comparisons = 0;
         Student* temp_arr = copy_students(original_arr, n);
         if (!temp_arr) {
             continue;
