@@ -954,6 +954,7 @@ void run_and_average_sort(
     double total_memory_usage = 0.0;
     
     PerformanceMetrics current_metrics;
+    printf("\n>>> %s 로 %s 정렬 알고리즘<<<\n", comparison_name, sort_name);
     
     for (int i = 0; i < NUM_REPETITIONS; i++) {
         Student* temp_arr = copy_students(original_arr, n);
@@ -966,7 +967,6 @@ void run_and_average_sort(
     }
 
         sort_func(temp_arr, n, compare_func, &current_metrics);
-        printf("\n>>> %s 로 %s 정렬 알고리즘<<<\n", comparison_name, sort_name);
 
         total_comparisons += current_metrics.comparisons;
         total_memory_usage += current_metrics.memory_usage;
