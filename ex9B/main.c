@@ -4,7 +4,7 @@
 
 #define MAX_NAME_LEN 50
 #define MAX_LINE_LEN 200 
-#define NUM_REPETITIONS 1
+#define NUM_REPETITIONS 1000
 
 typedef struct {
     int id;
