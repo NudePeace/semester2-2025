@@ -20,12 +20,6 @@ typedef struct {
     long long comparisons; 
 } PerformanceMetrics;
 
-typedef struct TreeNode {
-    Student data;
-    struct TreeNode* left;
-    struct TreeNode* right;
-} TreeNode;
-
 Student* load_students(const char* filename, int* out_count) {
     FILE* fp = fopen(filename, "r");
     if (!fp) {
@@ -469,6 +463,7 @@ void run_and_average_sort(
     
     PerformanceMetrics current_metrics;
     
+    printf("\n>>> %s 로 %s 정렬 알고리즘<<<\n", comparison_name, sort_name);
     for (int i = 0; i < NUM_REPETITIONS; i++) {
         current_metrics.comparisons = 0;
         Student* temp_arr = copy_students(original_arr, n);
@@ -481,7 +476,6 @@ void run_and_average_sort(
     }
 
         sort_func(temp_arr, n, compare_func, &current_metrics);
-        printf("\n>>> %s 로 %s 정렬 알고리즘<<<\n", comparison_name, sort_name);
 
         total_comparisons += current_metrics.comparisons;
 
